@@ -79,7 +79,11 @@ export const PersonalHeader = () => {
 								})}
 							/>
 						)}
-						{publication.title}
+            <div className={"flex flex-col"}>
+              {publication.title}<br/>
+              <span className={"text-xs"}>Software Engineer</span>
+            </div>
+
 					</Link>
 				</h1>
 			</div>

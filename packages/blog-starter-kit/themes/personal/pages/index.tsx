@@ -22,6 +22,10 @@ import {
 	PostsByPublicationQueryVariables,
 	PublicationFragment,
 } from '../generated/graphql';
+import Experience from "../components/Experience";
+import Education from "../components/Education";
+import Skills from "../components/Skills";
+import Socials from "../components/Socials";
 
 const GQL_ENDPOINT = process.env.NEXT_PUBLIC_HASHNODE_GQL_ENDPOINT;
 
@@ -83,27 +87,34 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 						}}
 					/>
 				</Head>
-				<Container className="mx-auto flex max-w-3xl flex-col items-stretch gap-10 px-5 py-10">
-					<PersonalHeader />
-					{posts.length > 0 && <MinimalPosts context="home" posts={posts} />}
-					{!loadedMore && pageInfo.hasNextPage && pageInfo.endCursor && (
-						<button className="bg-white" onClick={loadMore}>
-							Load more
-						</button>
-					)}
-					{loadedMore && pageInfo.hasNextPage && pageInfo.endCursor && (
-						<Waypoint onEnter={loadMore} bottomOffset={'10%'} />
-					)}
-
-					<Footer />
-				</Container>
-			</Layout>
-		</AppProvider>
-	);
+				<div className="mx-auto flex max-w-7xl flex-col items-stretch gap-10 px-5 py-10">
+          <PersonalHeader />
+          <div className={"flex flex-row"}>
+              <div className={"flex flex-col w-2/3 pr-6"}>
+                <Experience/>
+                <hr className={"my-4"} />
+                <Education/>
+              </div>
+            <div className={"flex flex-col w-1/3 px-6"}>
+              <span className={"text-lg font-bold my-6"}>About</span>
+              <p>Hi! I'm Akash, a backend developer based in Nashik, India 🇮🇳. I create robust backend & design APIs
+                across technologies.</p>
+              <hr className={"my-4"}/>
+              <Skills/>
+              <hr className={"my-4"}/>
+              <Socials/>
+              <hr className={"my-4"}/>
+            </div>
+          </div>
+          <Footer/>
+        </div>
+      </Layout>
+    </AppProvider>
+  );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-	const data = await request<PostsByPublicationQuery, PostsByPublicationQueryVariables>(
+  const data = await request<PostsByPublicationQuery, PostsByPublicationQueryVariables>(
 		GQL_ENDPOINT,
 		PostsByPublicationDocument,
 		{
