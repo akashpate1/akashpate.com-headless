@@ -97,8 +97,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
               </div>
             <div className={"flex flex-col w-1/3 px-6"}>
               <span className={"text-lg font-bold my-6"}>About</span>
-              <p>Hi! I'm Akash, a backend developer based in Nashik, India 🇮🇳. I create robust backend & design APIs
-                across technologies.</p>
+              <p>{"Hi! I'm Akash, a backend developer based in Nashik, India 🇮🇳. I create robust backend & design APIs across technologies"}.</p>
               <hr className={"my-4"}/>
               <Skills/>
               <hr className={"my-4"}/>
