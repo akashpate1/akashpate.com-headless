@@ -24,7 +24,7 @@ export default function Socials(){
     },
     {
       name: "Email",
-      url: "mailto:hello@kakashpate.com",
+      url: "mailto:hello@akashpate.com",
       icon: <IoIosMail />
 
     },

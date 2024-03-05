@@ -18,53 +18,64 @@ export const PersonalHeader = () => {
 	const hiddenItems = navbarItems.slice(2);
 
 	const navList = (
-		<ul className="flex list-none flex-row items-center gap-4 text-xs font-semibold uppercase tracking-tight text-neutral-600 dark:text-neutral-300">
-			{visibleItems.map((item) => (
-				<li key={item.url}>
-					<a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-						{item.label}
-					</a>
-				</li>
-			))}
+    <ul
+      className="flex list-none flex-row items-center gap-4 text-xs font-semibold uppercase tracking-tight text-neutral-600 dark:text-neutral-300">
+      <li>
+        <a href={"/"} className="hover:underline">
+          About
+        </a>
+      </li>
+      <li>
+        <a href={"/blogs"} className="hover:underline">
+          Blogs
+        </a>
+      </li>
+      {visibleItems.map((item) => (
+        <li key={item.url}>
+          <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+            {item.label}
+          </a>
+        </li>
+      ))}
 
-			{hiddenItems.length > 0 && (
-				<li>
-					<DropdownMenu.Root>
-						<DropdownMenu.Trigger asChild>
-							<button>More</button>
-						</DropdownMenu.Trigger>
-						<DropdownMenu.Portal>
-							<DropdownMenu.Content
-								className="flex flex-col items-stretch gap-1 rounded-lg border bg-white text-xs font-semibold uppercase tracking-tight text-neutral-600 shadow-xl dark:border-neutral-800 dark:bg-neutral-900  dark:text-neutral-300"
-								sideOffset={5}
-								align="end"
-							>
-								{hiddenItems.map((item) => (
-									<DropdownMenu.Item asChild key={item.url}>
-										<a
-											href={item.url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="block w-full p-2 hover:underline"
-										>
-											{item.label}
-										</a>
-									</DropdownMenu.Item>
-								))}
-							</DropdownMenu.Content>
-						</DropdownMenu.Portal>
-					</DropdownMenu.Root>
-				</li>
-			)}
-		</ul>
-	);
+      {hiddenItems.length > 0 && (
+        <li>
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger asChild>
+              <button>More</button>
+            </DropdownMenu.Trigger>
+            <DropdownMenu.Portal>
+              <DropdownMenu.Content
+                className="flex flex-col items-stretch gap-1 rounded-lg border bg-white text-xs font-semibold uppercase tracking-tight text-neutral-600 shadow-xl dark:border-neutral-800 dark:bg-neutral-900  dark:text-neutral-300"
+                sideOffset={5}
+                align="end"
+              >
+                {hiddenItems.map((item) => (
+                  <DropdownMenu.Item asChild key={item.url}>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full p-2 hover:underline"
+                    >
+                      {item.label}
+                    </a>
+                  </DropdownMenu.Item>
+                ))}
+              </DropdownMenu.Content>
+            </DropdownMenu.Portal>
+          </DropdownMenu.Root>
+        </li>
+      )}
+    </ul>
+  );
 
-	return (
-		<header className="grid grid-cols-2 items-center gap-5 ">
-			<div className="col-span-full md:col-span-1">
-				<h1>
-					<Link
-						className="flex flex-row items-center gap-2 text-lg font-bold leading-tight tracking-tight text-black dark:text-white"
+  return (
+    <header className="grid grid-cols-2 items-center gap-5 ">
+      <div className="col-span-full md:col-span-1">
+        <h1>
+          <Link
+            className="flex flex-row items-center gap-2 text-lg font-bold leading-tight tracking-tight text-black dark:text-white"
 						href="/"
 						aria-label={`${publication.author.name}'s blog home page`}
 					>

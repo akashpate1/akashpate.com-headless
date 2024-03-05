@@ -19,12 +19,7 @@ export default function Experience(){
       companyName: "Cronix LLC",
       positionStart: "July 2023",
       positionEnd: "Present",
-      description: "Developed and maintained server-side components for an e-commerce platform using PHP and MySQL.\n" +
-        "I implemented a RESTful API for a mobile application using Core PHP, allowing seamless communication between the app and the\n" +
-        "server.\n" +
-        "Integrated Payment Gateway & Shipping Gateway in e-commerce web application.\n" +
-        "Created and managed a cloud-based infrastructure using Amazon Web Services, including setting up and configuring EC2\n" +
-        "instances and S3 storage buckets.\n"
+      description: ""
     },
     {
       id: 2,
@@ -32,12 +27,23 @@ export default function Experience(){
       companyName: "Innovins Softtech Solutions Pvt. Ltd.",
       positionStart: "August 2022",
       positionEnd: "July 2023",
-      description: "Developed and maintained server-side components for an e-commerce platform using PHP and MySQL.\n" +
-        "I implemented a RESTful API for a mobile application using Core PHP, allowing seamless communication between the app and the\n" +
-        "server.\n" +
-        "Integrated Payment Gateway & Shipping Gateway in e-commerce web application.\n" +
-        "Created and managed a cloud-based infrastructure using Amazon Web Services, including setting up and configuring EC2\n" +
-        "instances and S3 storage buckets.\n"
+      description: ""
+    },
+    {
+      id: 3,
+      position: "Full Stack Developer",
+      companyName: "Freelancer",
+      positionStart: "June 2021",
+      positionEnd: "July 2022",
+      description: ""
+    },
+    {
+      id: 4,
+      position: "CTO",
+      companyName: "Divspace LLP",
+      positionStart: "January 2019",
+      positionEnd: "May 2021",
+      description: ""
     }
   ]
 
