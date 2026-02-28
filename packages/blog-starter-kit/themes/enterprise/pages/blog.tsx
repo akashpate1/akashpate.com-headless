@@ -42,12 +42,12 @@ export default function BlogList({ publication, posts }: Props) {
 					<section className="blog-page">
 						{/* Header */}
 						<div className="blog-page__header">
-							<h1 className="blog-page__title">/* blog */</h1>
-							<p className="blog-page__subtitle">// thoughts on code, tools &amp; building things</p>
+							<h1 className="blog-page__title">{'/* blog */'}</h1>
+							<p className="blog-page__subtitle">{'// thoughts on code, tools & building things'}</p>
 						</div>
 
 						{posts.length === 0 ? (
-							<p className="blog-page__status">// no posts yet — check back soon</p>
+							<p className="blog-page__status">{'// no posts yet — check back soon'}</p>
 						) : (
 							<div className="blog-grid">
 								{posts.map((post) => (

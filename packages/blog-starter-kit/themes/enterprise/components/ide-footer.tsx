@@ -54,7 +54,7 @@ export const IDEFooter = () => {
 						</a>
 					</div>
 				</div>
-				<p className="ide-footer__comment">// built with React, no shortcuts taken</p>
+				<p className="ide-footer__comment">{'// built with React, no shortcuts taken'}</p>
 			</div>
 		</footer>
 	);

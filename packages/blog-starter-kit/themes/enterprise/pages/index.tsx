@@ -90,7 +90,7 @@ export default function Home({ publication }: Props) {
 					{/* ── Hero ────────────────────────────────────────── */}
 					<section className="hero">
 						<div className="hero__code-block">
-							<div className="hero__comment">// backend developer</div>
+							<div className="hero__comment">{'// backend developer'}</div>
 							<div>
 								<span className="hero__keyword">const </span>
 								<span className="hero__var-name">engineer</span>
@@ -144,7 +144,7 @@ export default function Home({ publication }: Props) {
 
 					{/* ── Experience ──────────────────────────────────── */}
 					<section className="portfolio-section" id="experience">
-						<p className="section-label">/* experience */</p>
+						<p className="section-label">{'/* experience */'}</p>
 						<ul className="timeline">
 							{EXPERIENCE.map((item) => (
 								<li key={`${item.role}-${item.company}`} className="timeline__item">
@@ -158,7 +158,7 @@ export default function Home({ publication }: Props) {
 
 					{/* ── Projects ────────────────────────────────────── */}
 					<section className="portfolio-section" id="projects">
-						<p className="section-label">// projects</p>
+						<p className="section-label">{'// projects'}</p>
 						<div className="projects-grid">
 							{PROJECTS.map((project) => (
 								<div key={project.title} className="project-card">
@@ -177,7 +177,7 @@ export default function Home({ publication }: Props) {
 
 					{/* ── Skills ──────────────────────────────────────── */}
 					<section className="portfolio-section" id="skills">
-						<p className="section-label">// skills</p>
+						<p className="section-label">{'// skills'}</p>
 						<ul className="skills-list">
 							{SKILLS.map((skill) => (
 								<li key={skill} className="code-pill">{skill}</li>
@@ -187,7 +187,7 @@ export default function Home({ publication }: Props) {
 
 					{/* ── Education ───────────────────────────────────── */}
 					<section className="portfolio-section" id="education">
-						<p className="section-label">// education</p>
+						<p className="section-label">{'// education'}</p>
 						<ul className="timeline">
 							{EDUCATION.map((item) => (
 								<li key={`${item.degree}-${item.institution}`} className="timeline__item">
